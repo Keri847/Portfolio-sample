@@ -1,0 +1,684 @@
+/* =====================================================
+   GENERAL STYLES
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   NAVIGATION BAR
+===================================================== */
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    min-height: 90px;
+    background-color: #2d0b21;
+
+    border-bottom: 7px solid #e52b18;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 6%;
+}
+
+
+/* Logo */
+
+.logo a {
+    color: rgb(26, 30, 128);
+    text-decoration: none;
+}
+
+.logo h2 {
+    font-size: 21px;
+    margin-bottom: 2px;
+}
+
+.logo span {
+    color: #dddddd;
+    font-size: 13px;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+.nav-links a {
+    color: rgb(37, 157, 19);
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff5a3d;
+}
+
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO / ABOUT
+===================================================== */
+
+.hero {
+    min-height: 360px;
+
+    background-color: #fff8cf;
+
+    border-left: 8px solid #e52b18;
+    border-right: 8px solid #e52b18;
+    border-bottom: 7px solid #e52b18;
+
+    display: flex;
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 45px 10%;
+}
+
+
+/* Profile */
+
+.profile-container {
+    width: 280px;
+    min-width: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =====================================================
+   CSS PERSON ILLUSTRATION
+===================================================== */
+
+.person {
+    position: relative;
+
+    width: 180px;
+    height: 230px;
+}
+
+
+/* Hair */
+
+.hair {
+    position: absolute;
+
+    width: 145px;
+    height: 170px;
+
+    background-color: #171c27;
+
+    border-radius: 70px 70px 45px 45px;
+
+    left: 17px;
+    top: 5px;
+
+    z-index: 1;
+}
+
+
+/* Hair bottom */
+
+.hair::after {
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+    height: 90px;
+
+    background-color: #171c27;
+
+    left: 0;
+    bottom: -20px;
+
+    border-radius: 0 0 50px 50px;
+}
+
+
+/* Face */
+
+.head {
+    position: absolute;
+
+    width: 125px;
+    height: 135px;
+
+    background-color: #f5ad54;
+
+    border-radius: 50%;
+
+    left: 27px;
+    top: 20px;
+
+    z-index: 2;
+}
+
+
+/* Eyes */
+
+.eye {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: #252525;
+
+    border-radius: 50%;
+
+    top: 75px;
+
+    z-index: 5;
+}
+
+.eye-left {
+    left: 58px;
+}
+
+.eye-right {
+    left: 100px;
+}
+
+
+/* Mouth */
+
+.mouth {
+    position: absolute;
+
+    width: 22px;
+    height: 10px;
+
+    border-bottom: 3px solid #333;
+
+    border-radius: 50%;
+
+    left: 78px;
+    top: 102px;
+
+    z-index: 5;
+}
+
+
+/* Body */
+
+.body {
+    position: absolute;
+
+    width: 115px;
+    height: 100px;
+
+    background-color: #1e2630;
+
+    border-radius: 50px 50px 10px 10px;
+
+    left: 32px;
+    top: 125px;
+
+    z-index: 0;
+}
+
+
+/* Laptop */
+
+.laptop {
+    position: absolute;
+
+    width: 130px;
+    height: 75px;
+
+    background-color: #c9bd79;
+
+    left: 25px;
+    top: 137px;
+
+    z-index: 7;
+
+    border-radius: 5px;
+}
+
+
+/* Laptop base */
+
+.laptop::after {
+    content: "";
+
+    position: absolute;
+
+    width: 155px;
+    height: 8px;
+
+    background-color: #a79c61;
+
+    left: -12px;
+    bottom: -8px;
+
+    border-radius: 5px;
+}
+
+
+/* Hero text */
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    color: #7e2819;
+
+    font-size: 44px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.section-title {
+    color: #7e2819;
+
+    font-size: 34px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-section {
+    background-color: white;
+
+    border-left: 8px solid #e52b18;
+    border-right: 8px solid #e52b18;
+    border-bottom: 7px solid #e52b18;
+
+    padding: 40px 7%;
+}
+
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 35px;
+}
+
+
+/* Skill card */
+
+.skill-card {
+    min-height: 155px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    background-color: white;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Skill icon */
+
+.skill-icon {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+.skill-card h3 {
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.skill-card p {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-section {
+    background-color: white;
+
+    border-left: 8px solid #e52b18;
+    border-right: 8px solid #e52b18;
+    border-bottom: 7px solid #e52b18;
+
+    padding: 40px 7%;
+}
+
+
+/* Individual project */
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    color: #333;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.project p {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    padding-left: 25px;
+
+    position: relative;
+}
+
+
+/* Bullet */
+
+.project p::before {
+    content: "•";
+
+    position: absolute;
+
+    left: 5px;
+
+    font-size: 22px;
+
+    color: #333;
+}
+
+
+/* =====================================================
+   RECOMMENDATIONS
+===================================================== */
+
+.recommendations-section {
+    background-color: #fff8cf;
+
+    border-left: 8px solid #e52b18;
+    border-right: 8px solid #e52b18;
+
+    padding: 45px 7%;
+}
+
+
+.recommendations-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Recommendation card */
+
+.recommendation-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.recommendation-card p {
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.recommendation-card h4 {
+    color: #7e2819;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background-color: #2d0b21;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .recommendations-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 40px 6%;
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+        padding-top: 20px;
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+
+    .profile-container {
+        min-width: auto;
+    }
+
+
+    .recommendations-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+
+    .skills-section,
+    .projects-section,
+    .recommendations-section {
+        padding: 35px 5%;
+    }
+
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-title {
+        font-size: 28px;
+    }
+
+}
